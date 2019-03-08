@@ -30,7 +30,7 @@
         <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding LastName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="150"/>
         <Label Grid.Row="1" Grid.Column="2" Content="{Binding LastName, Mode=OneWay}"/>
 
-        <Button Grid.Row="2" Grid.Column="0" Content="Hinzufügen" Command="{Binding AddNameCommand}"/>
+        <Button Grid.Row="2" Grid.Column="0" Margin="5px" Content="Hinzufügen" Command="{Binding AddNameCommand}"/>
 
         <DataGrid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" ItemsSource="{Binding Names}"/>
 
