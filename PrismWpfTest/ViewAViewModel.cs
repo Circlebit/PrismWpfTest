@@ -1,6 +1,8 @@
-﻿using Prism.Mvvm;
+﻿using Prism.Commands;
+using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -26,15 +28,34 @@ namespace PrismWpfTest
             set { SetProperty(ref _lastName, value); }
         }
 
-        private List<Name> _names;
-        public List<Name> Names
+        private ObservableCollection<Name> _names;
+        public ObservableCollection<Name> Names
         {
             get { return _names; }
             set { SetProperty(ref _names, value); }
         }
 
+        public ICommand AddNameCommand { get; set; }
 
+        public ViewAViewModel()
+        {
+            Names = new ObservableCollection<Name>();
+            AddNameCommand = new DelegateCommand(Execute, CanExecute)
+                .ObservesProperty(() => FirstName)
+                .ObservesProperty(() => LastName);
+        }
 
+        private bool CanExecute()
+        {
+            return !String.IsNullOrWhiteSpace(FirstName) && !String.IsNullOrWhiteSpace(LastName);
+        }
+
+        private void Execute()
+        {
+            Names.Add(new Name(FirstName, LastName));
+            FirstName = String.Empty;
+            LastName = String.Empty;
+        }
     }
 
     class Name

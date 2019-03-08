@@ -14,6 +14,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
@@ -22,16 +23,16 @@
         </Grid.ColumnDefinitions>
 
         <Label Grid.Row="0" Grid.Column="0" Content="LastName:"/>
-        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding FirstName, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" Width="150"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding FirstName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="150"/>
         <Label Grid.Row="0" Grid.Column="2" Content="{Binding FirstName, Mode=OneWay}"/>
 
         <Label Grid.Row="1" Grid.Column="0" Content="FirstName:"/>
-        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding LastName, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" Width="150"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding LastName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="150"/>
         <Label Grid.Row="1" Grid.Column="2" Content="{Binding LastName, Mode=OneWay}"/>
 
-        <Button Grid.Row="2" Grid.Column="0" Content="Hinzufügen" />
-        
-        
+        <Button Grid.Row="2" Grid.Column="0" Content="Hinzufügen" Command="{Binding AddNameCommand}"/>
+
+        <DataGrid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" ItemsSource="{Binding Names}"/>
 
     </Grid>
 </Window>
