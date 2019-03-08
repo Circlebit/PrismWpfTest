@@ -5,8 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PrismWpfTest"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="400" Width="400">
+    <Window.DataContext>
+        <local:ViewAViewModel/>
+    </Window.DataContext>
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="LastName:"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding FirstName, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" Width="150"/>
+        <Label Grid.Row="0" Grid.Column="2" Content="{Binding FirstName, Mode=OneWay}"/>
+
+        <Label Grid.Row="1" Grid.Column="0" Content="FirstName:"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding LastName, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" Width="150"/>
+        <Label Grid.Row="1" Grid.Column="2" Content="{Binding LastName, Mode=OneWay}"/>
+
+        <Button Grid.Row="2" Grid.Column="0" Content="Hinzufügen" />
         
+        
+
     </Grid>
 </Window>
