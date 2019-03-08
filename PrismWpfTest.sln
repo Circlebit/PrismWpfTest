@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.438
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismWpfTest", "PrismWpfTest\PrismWpfTest.csproj", "{886B266B-12D2-4711-AC5D-56DC4EC4E593}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{886B266B-12D2-4711-AC5D-56DC4EC4E593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{886B266B-12D2-4711-AC5D-56DC4EC4E593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{886B266B-12D2-4711-AC5D-56DC4EC4E593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{886B266B-12D2-4711-AC5D-56DC4EC4E593}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8CB7A6E5-60F4-489A-89F6-FE8EDAB749F6}
+	EndGlobalSection
+EndGlobal
