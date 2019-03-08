@@ -22,7 +22,7 @@ namespace PrismWpfTest
 
         protected override Window CreateShell()
         {
-            return ServiceLocator.Current.GetInstance<MainWindow>();
+            return ServiceLocator.Current.GetInstance<Views.MainWindow>();
         }
     }
 }

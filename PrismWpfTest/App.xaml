@@ -1,9 +1,7 @@
-﻿<prism:PrismApplication x:Class="PrismWpfTest.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:PrismWpfTest"
-             xmlns:prism="http://prismlibrary.com/">
-    <prism:PrismApplication.Resources>
-         
-    </prism:PrismApplication.Resources>
+﻿<prism:PrismApplication
+    x:Class="PrismWpfTest.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:prism="http://prismlibrary.com/">
+    <prism:PrismApplication.Resources />
 </prism:PrismApplication>
